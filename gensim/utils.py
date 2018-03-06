@@ -1556,7 +1556,7 @@ def has_pattern():
 
     """
     try:
-        from pattern.en import parse  # noqa:F401
+        from pattern3.en import parse  # noqa:F401
         return True
     except ImportError:
         return False
@@ -1608,7 +1608,7 @@ def lemmatize(content, allowed_tags=re.compile(r'(NN|VB|JJ|RB)'), light=False,
         raise ImportError(
             "Pattern library is not installed. Pattern library is needed in order to use lemmatize function"
         )
-    from pattern.en import parse
+    from pattern3.en import parse
 
     if light:
         import warnings
